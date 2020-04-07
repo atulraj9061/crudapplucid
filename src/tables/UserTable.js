@@ -3,7 +3,7 @@ import { Button, Table } from 'lucid-ui';
 const { Thead, Tbody, Tr, Th, Td } = Table;
 
 const UserTable = props => (
-  <Table>
+  <Table className="datatable">
     <Thead>
       <Tr>
         <Th>Name</Th>

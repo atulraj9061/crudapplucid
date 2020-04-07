@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.maintable{
+    border: 1.5px solid grey;
+    background-color: white;
+    padding-top: 4px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    width:480px;
+    height:280px;
+    margin-left: 300px;
+    margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.textname{
+    margin-left: 40px;
+    border-radius: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.textname1{
+    margin-left: 13px;
+    border-radius: 1px;
+}
+
+.button{
+    background-color: #f44336; /* Red */ 
+    border: none;
+    color: white;
+    padding: 5px 68px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 85px;
+  
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .detail{
+      margin-left: 80px;
+      margin-top: 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .datatable{
+      margin-left: 450px;
+      margin-top: -170px
   }
-}
+
+  .editbutton{
+    background-color:green; 
+    border: none;
+    color: white;
+    padding: 5px 28px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 55px;
+  
+  }
+
+  .deletebutton{
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 5px 28px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+  
+  }

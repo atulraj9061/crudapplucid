@@ -2,6 +2,7 @@ import React, {useState,Fragment} from 'react'
 import AddUserForm from './forms/AddUserForm'
 import EditUserForm from './forms/EditUserForm'
 import UserTable from './tables/UserTable'
+import './App.css';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
 	const [ users, setUsers ] = useState(usersData)
 	const [ currentUser, setCurrentUser ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
+	const [Show, toggleShow]=useState(true)
 
 	const addUser = user => {
 		user.id = users.length + 1
@@ -37,24 +39,24 @@ const App = () => {
 
 	return (
 		<div className="container">
-				<div className="App">
-					{editing ? (
-						<Fragment>
-							<EditUserForm
-								editing={editing}
-								setEditing={setEditing}
-								currentUser={currentUser}
-								updateUser={updateUser}
+	    <div className="App">
+			{editing ? (
+				<Fragment>
+				<EditUserForm
+				 editing={editing}
+				 setEditing={setEditing}
+				 currentUser={currentUser}
+				updateUser={updateUser}
 							/>
-						</Fragment>
-					) : (
-						<Fragment>
-							<AddUserForm addUser={addUser} />
-						</Fragment>
+				</Fragment>
+				) : (
+				<Fragment>
+			  <AddUserForm addUser={addUser} />
+				</Fragment>
 					)}
 				</div>
 				<div className="table">
-					<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
+			<UserTable users={users} editRow={editRow} deleteUser={deleteUser}/>
 				</div>
 			</div>
 	)

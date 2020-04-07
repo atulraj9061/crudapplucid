@@ -17,6 +17,7 @@ const EditUserForm = props => {
   }
 
   return (
+    <div className="table">
     <form
       onSubmit={event => {
         event.preventDefault()
@@ -29,11 +30,12 @@ const EditUserForm = props => {
       <TextField name="username" value={user.username} onChange={handleInputChange} /><br></br><br></br>
       <ButtonGroup>
       <Button>Update</Button>
-      <Button onClick={() => props.setEditing(false)} className="button muted-button">
+      <Button onClick={() => props.setEditing(false)} className="button">
         Cancel
       </Button>
       </ButtonGroup>
     </form>
+    </div>
   )
 }
 

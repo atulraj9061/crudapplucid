@@ -11,6 +11,7 @@ const AddUserForm = props => {
 	}
 
 	return (
+		
 		<form
 			onSubmit={event => {
 				event.preventDefault()
@@ -19,12 +20,18 @@ const AddUserForm = props => {
 				setUser(initialFormState)
 			}}
 		>
+			<div className ="maintable">
+				<div className="detail">
 			<label>Name</label>
-			<TextField type="text" name="name" value={user.name} onChange={handleInputChange} /><br></br><br></br>
+			<TextField type="text" name="name" className="textname"value={user.name} onChange={handleInputChange} /><br></br><br></br>
 			<label>Username</label>
-			<TextField type="text" name="username" value={user.username} onChange={handleInputChange} /><br></br><br></br>
-			<Button>Add</Button> 
+			<TextField type="text" name="username" className="textname1" value={user.username} onChange={handleInputChange} /><br></br><br></br>
+			<Button className="button">Add</Button>
+			</div> 
+			</div>
+			
 		</form>
+		
 	)
 }
 
