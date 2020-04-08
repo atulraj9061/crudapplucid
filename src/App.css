@@ -43,9 +43,23 @@
   }
 
   .datatable{
-      margin-left: 450px;
-      margin-top: -170px
+      margin-left: 320px;
+      margin-top: -170px;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
   }
+
+  Th,Td {
+    border: 3px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+  }
+
+  Tr:nth-child(even){
+    background-color: #dddddd;
+  }
+
 
   .editbutton{
     background-color:green; 

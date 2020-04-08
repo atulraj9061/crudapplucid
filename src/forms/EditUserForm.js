@@ -30,7 +30,7 @@ const EditUserForm = props => {
       <TextField name="username" value={user.username} onChange={handleInputChange} /><br></br><br></br>
       <ButtonGroup>
       <Button>Update</Button>
-      <Button onClick={() => props.setEditing(false)} className="button">
+      <Button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel
       </Button>
       </ButtonGroup>

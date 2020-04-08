@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button,TextField} from 'lucid-ui';
 
 const AddUserForm = props => {
 	const initialFormState = { id: null, name: '', username: '' }
 	const [ user, setUser ] = useState(initialFormState)
+	const[Toggle,ShowToggle]=useState(false);
 
 	const handleInputChange = event => {
 		const { name, value } = event.target
@@ -20,15 +21,15 @@ const AddUserForm = props => {
 				setUser(initialFormState)
 			}}
 		>
-			<div className ="maintable">
+		{ShowToggle &&<div className ="maintable">
 				<div className="detail">
 			<label>Name</label>
 			<TextField type="text" name="name" className="textname"value={user.name} onChange={handleInputChange} /><br></br><br></br>
 			<label>Username</label>
 			<TextField type="text" name="username" className="textname1" value={user.username} onChange={handleInputChange} /><br></br><br></br>
-			<Button className="button">Add</Button>
+			<Button className="button" onClick={()=>ShowToggle(!Toggle)}>Add</Button>
 			</div> 
-			</div>
+			</div>}
 			
 		</form>
 		

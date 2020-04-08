@@ -15,7 +15,7 @@ const App = () => {
 	const [ users, setUsers ] = useState(usersData)
 	const [ currentUser, setCurrentUser ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
-	const [Show, toggleShow]=useState(true)
+
 
 	const addUser = user => {
 		user.id = users.length + 1
