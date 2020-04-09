@@ -23,9 +23,9 @@ const AddUserForm = props => {
 		>
 		{ShowToggle &&<div className ="maintable">
 				<div className="detail">
-			<label>Name</label>
+			<label><b>Name</b></label>
 			<TextField type="text" name="name" className="textname"value={user.name} onChange={handleInputChange} /><br></br><br></br>
-			<label>Username</label>
+			<label><b>Username</b></label>
 			<TextField type="text" name="username" className="textname1" value={user.username} onChange={handleInputChange} /><br></br><br></br>
 			<Button className="button" onClick={()=>ShowToggle(!Toggle)}>Add</Button>
 			</div> 

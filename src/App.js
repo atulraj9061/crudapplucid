@@ -15,6 +15,7 @@ const App = () => {
 	const [ users, setUsers ] = useState(usersData)
 	const [ currentUser, setCurrentUser ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
+	const [Toggle,ShowToggle] = useState(false)
 
 
 	const addUser = user => {
@@ -34,6 +35,7 @@ const App = () => {
 
 	const editRow = user => {
 		setEditing(true)
+		ShowToggle(true)
 		setCurrentUser({ id: user.id, name: user.name, username: user.username })
 	}
 
@@ -44,6 +46,7 @@ const App = () => {
 				<Fragment>
 				<EditUserForm
 				 editing={editing}
+				 Toggle={Toggle}	
 				 setEditing={setEditing}
 				 currentUser={currentUser}
 				updateUser={updateUser}
