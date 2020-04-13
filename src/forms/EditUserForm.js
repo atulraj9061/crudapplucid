@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button,TextField,ButtonGroup } from 'lucid-ui';
+//import { Button,TextField,ButtonGroup } from 'lucid-ui';
 
 const EditUserForm = props => {
   const [ user, setUser ] = useState(props.currentUser)
@@ -27,15 +27,13 @@ const EditUserForm = props => {
       <div className="updateform">
         <div className="updateform1">
       <label>Name</label>
-      <TextField name="name" value={user.name} onChange={handleInputChange} className="updatetext" /><br></br><br></br>
+      <input name="name" value={user.name} onChange={handleInputChange} className="updatetext" /><br></br><br></br>
       <label>Username</label>
-      <TextField name="username" value={user.username} onChange={handleInputChange} className="updatetext1" /><br></br><br></br>
-      <ButtonGroup>
-      <Button className="updatebutton">Update</Button>
-      <Button onClick={() => props.setEditing(false) } className="Cancelbutton">
+      <input name="username" value={user.username} onChange={handleInputChange} className="updatetext1" /><br></br><br></br>
+      <button className="updatebutton">Update</button>
+      <button onClick={() => props.setEditing(false) } className="Cancelbutton">
         Cancel
-      </Button>
-      </ButtonGroup>
+      </button>
       </div>
       </div>
     </form>
