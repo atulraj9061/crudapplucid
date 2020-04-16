@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-//import { Button,TextField,ButtonGroup } from 'lucid-ui';
+import {TextField,Button} from 'lucid-ui'
 
 const EditUserForm = props => {
   const [ user, setUser ] = useState(props.currentUser)
+  const[Show,ShowTable]=useState(false)
 
   useEffect(
     () => {
@@ -17,25 +18,25 @@ const EditUserForm = props => {
   }
 
   return (
-    <div className="table">
+   <div className="table">
     <form
       onSubmit={event => {
         event.preventDefault()
         props.updateUser(user.id, user)
       }}
     >
-      <div className="updateform">
+     {ShowTable&& <div className="updateform">
         <div className="updateform1">
       <label>Name</label>
-      <input name="name" value={user.name} onChange={handleInputChange} className="updatetext" /><br></br><br></br>
+      <TextField name="name" value={user.name} onChange={handleInputChange} className="updatetext" /><br></br><br></br>
       <label>Username</label>
-      <input name="username" value={user.username} onChange={handleInputChange} className="updatetext1" /><br></br><br></br>
-      <button className="updatebutton">Update</button>
-      <button onClick={() => props.setEditing(false) } className="Cancelbutton">
+      <TextField name="username" value={user.username} onChange={handleInputChange} className="updatetext1" /><br></br><br></br>
+      <Button className="updatebutton">Update</Button>
+      <Button onClick={() => props.setEditing(false) } className="Cancelbutton">
         Cancel
-      </button>
+      </Button>
       </div>
-      </div>
+      </div>}
     </form>
     </div>
   )
