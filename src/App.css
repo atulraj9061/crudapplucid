@@ -12,13 +12,14 @@
 }
 
 .textname{
-    margin-left: 40px;
+    margin-left: 110px;
     border-radius: 1px;
 }
 
 .textname1{
-    margin-left: 13px;
+    margin-left: 113px;
     border-radius: 1px;
+    margin-top:-500px;
 }
 
 .button{
@@ -165,3 +166,4 @@
     margin-left: 5px;
   
 }
+
